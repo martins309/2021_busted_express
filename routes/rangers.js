@@ -17,7 +17,7 @@ router.get('/', (req, res) => {
 
 router.get('/:slug', (req, res) => {
     const { slug } = req.params;
-    const ranger = rangersModel.find(ranger) => {
+    const ranger = rangersModel.find(ranger => {
         if (ranger.slug === slug) {
             return ranger;
         }
@@ -37,4 +37,6 @@ router.get('/:slug', (req, res) => {
     }
 
 });
+
+module.exports = router; 
 
